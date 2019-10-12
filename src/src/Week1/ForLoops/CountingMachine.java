@@ -1,19 +1,19 @@
 package Week1.ForLoops;
 
+import java.util.Optional;
+import java.util.Scanner;
 import java.util.stream.IntStream;
 
 public class CountingMachine {
+
     public static void main(String[] args) {
-        IntStream.range(1, 101).forEach(i -> {
-            if (i % 15 == 0) {
-                System.out.println("FizzBuss");
-            } else if (i % 5 == 0) {
-                System.out.println("Buzz");
-            } else if (i % 3 == 0) {
-                System.out.println("Fizz");
-            } else {
-                System.out.println(String.format("%d", i));
-            }
+        Scanner input = new Scanner(System.in);
+        System.out.println("Count to:");
+
+        Optional<Integer> input_num = Optional.ofNullable(input.nextInt());
+        IntStream.range(0,input_num.orElse(0) + 1).forEach(i->{
+            System.out.print(i + " ");
         });
     }
+
 }
