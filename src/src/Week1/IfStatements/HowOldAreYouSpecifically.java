@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class HowOldAreYouSpecifically {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        System.out.println(String.format("Hey, what's your name? (Sorry, I keep forgetting.)"));
+        System.out.print(String.format("Hey, what's your name? (Sorry, I keep forgetting.)"));
 
         Optional<String> name = Optional.ofNullable(input.nextLine());
         System.out.println(String.format("Ok, %s, how old are you?", name.orElse("John")));
@@ -17,7 +17,7 @@ public class HowOldAreYouSpecifically {
         if (age < 15) {
             System.out.println("You can't drive.");
         } else if (age < 18) {
-            System.out.println("You can drive but not vote.");
+            System.out.println(String.format("You can drive but not vote, %s.", name.orElse("John")));
         } else if (age < 25) {
             System.out.println("You can vote but not rent a car.");
         } else {

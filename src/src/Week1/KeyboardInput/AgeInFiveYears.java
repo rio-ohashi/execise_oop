@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class AgeInFiveYears {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        System.out.println(String.format("Hello.  What is your name"));
+        System.out.println(String.format("Hello.  What is your name?"));
 
         Optional<String> name = Optional.ofNullable(input.nextLine());
         System.out.println(String.format("Hi, %s!  How old are you?", name.orElse("John")));

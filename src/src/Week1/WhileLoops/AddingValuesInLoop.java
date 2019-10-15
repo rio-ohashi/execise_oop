@@ -13,11 +13,11 @@ public class AddingValuesInLoop {
 
         while (num_input != 0) {
             num_sum += num_input;
-            System.out.println(String.format("The total so far is %d", num_sum));
+            System.out.println(String.format("Number: The total so far is %d", num_sum));
             num_input = (input.nextInt());
         }
 
-        System.out.println(String.format("The total is %d", num_sum));
+        System.out.println(String.format("Number:\nThe total is %d.", num_sum));
 
     }
 }
